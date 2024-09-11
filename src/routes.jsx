@@ -19,20 +19,20 @@ export const routes = [
     pages: [
       {
         icon: <HomeIcon {...icon} />,
-        name: "dashboard",
+        name: "Home",
         path: "/home",
         element: <Home />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
-        name: "profile",
-        path: "/profile",
+        name: "Information",
+        path: "/information",
         element: <Profile />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
+        name: "Explore",
+        path: "/explore",
         element: <Tables />,
       },
       {
