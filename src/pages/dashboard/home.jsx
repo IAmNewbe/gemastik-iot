@@ -46,7 +46,7 @@ export function Home() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://${THINGSBOARD_HOST_NAME}/api/v1/${ACCESS_TOKEN}/attributes?clientKeys=${clientKeys}`
+          `https://${THINGSBOARD_HOST_NAME}/api/v1/${ACCESS_TOKEN}/attributes?clientKeys=${clientKeys}`
         );
         
         setData(response.data["client"]);
