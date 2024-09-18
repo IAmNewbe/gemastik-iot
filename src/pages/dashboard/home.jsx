@@ -26,8 +26,45 @@ import humid from "../../../public/img/humid.png";
 import { platformSettingsData, conversationsData, projectsData } from "@/data";
 import { ProfileInfoCard, MessageCard } from "@/widgets/cards";
 import Weather from "./weather";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import mqtt from 'mqtt';
+import RealTimeData from "./RealTimeData";
 
 export function Home() {
+  const [data, setData] = useState({
+    "humidity": 67,
+    "temperature": 26,
+    "wind_speed": 10
+  });
+  const THINGSBOARD_HOST_NAME = '18.140.254.213'; // ganti dengan hostname ThingsBoard Anda
+  const ACCESS_TOKEN = 'nyzA0KZowFlKHquflBxr'; // ganti dengan access token
+  const clientKeys = 'humidity,temperature,wind_speed'; // sesuaikan dengan kunci client
+  // const sharedKeys = 'shared1,shared2'; // sesuaikan dengan kunci shared
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://${THINGSBOARD_HOST_NAME}/api/v1/${ACCESS_TOKEN}/attributes?clientKeys=${clientKeys}`
+        );
+        
+        setData(response.data["client"]);
+        // console.log(response.data);
+        
+      } catch (error) {
+        console.error('Error fetching data', error);
+      }
+    };
+
+    fetchData();
+    
+    console.log("data : ", data);
+    console.log(typeof(data["humidity"]));
+    const interval = setInterval(fetchData, 5000); // Refresh data setiap 5 detik
+    return () => clearInterval(interval);
+  }, [THINGSBOARD_HOST_NAME, ACCESS_TOKEN, clientKeys]);
+
   return (
     <div className="mt-12">
 
@@ -116,21 +153,22 @@ export function Home() {
         <div className="flex flex-col items-center">
           <img src={temp} alt="alternative" className="h-10 w-10 mt-3"/>
           <span className="mt-1 text-sm">Temperature</span>
-          <span className="font-semibold text-lg">27°C</span>
+          <span className="font-semibold text-lg">{data["temperature"].toFixed(2)} °C</span>
         </div>
         <div className="flex flex-col items-center">
           <img src={humid} alt="alternative" className="h-10 w-10 mt-3"/>
           <span className="mt-1 text-sm">Humidity</span>
-          <span className="font-semibold text-lg">93 %</span>
+          <span className="font-semibold text-lg">{data["humidity"].toFixed(2)} %</span>
         </div>
       </div>
       <div className="flex justify-center mt-4">
         <div className="flex flex-col items-center md:mt-3">
           <img src={wind} alt="alternative" className="h-10 w-10 mt-3"/>
           <span className="mt-1 text-sm">Wind Speed</span>
-          <span className="font-semibold text-lg">6 km/h</span>
+          <span className="font-semibold text-lg">{data["wind_speed"].toFixed(2)} km/h</span>
         </div>
       </div>
+      {/* <RealTimeData /> */}
     </div>
       <div className="mb-4 ">
         <Card className="border border-blue-gray-100 shadow-sm ">
