@@ -2,7 +2,7 @@ export const vacationsData = [
   {
     img: "/img/vacations/1.png",
     title: "Bali Bird Park",
-    tag: "Project #1",
+    tag: "Sukawati, Gianyar",
     description:
       "Bali Bird Park is a 2000 square meter park located in Gianyar Regency and offers various...",
     route: "/dashboard/profile",
@@ -17,7 +17,7 @@ export const vacationsData = [
   {
     img: "/img/vacations/2.png",
     title: "Kecak Uluwatu",
-    tag: "Project #2",
+    tag: "Kuta Sel., Badung",
     description:
       "KinUluwatu Kecak Dance is an iconic traditional Balinese dance and drama performed...",
     route: "/dashboard/profile",
@@ -32,7 +32,7 @@ export const vacationsData = [
   {
     img: "/img/vacations/3.png",
     title: "Minimalist",
-    tag: "Project #3",
+    tag: "Sukolilo, Surabaya",
     description:
       "Different people have different taste, and various types of music.",
     route: "/dashboard/profile",

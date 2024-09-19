@@ -44,9 +44,7 @@ Footer.defaultProps = {
   brandName: "Visionaries Crafting Our Innovative Smart City",
   brandLink: "/",
   routes: [
-    { name: "Visionaries", path: "https://www.creative-tim.com" },
-    { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-    { name: "Blog", path: "https://www.creative-tim.com/blog" },
+    { name: "Visionaries", path: "" },
     { name: "License", path: "https://www.creative-tim.com/license" },
   ],
 };

@@ -16,6 +16,7 @@ import {
   Button,
   Carousel,
 } from "@material-tailwind/react";
+import call from "../../../public/img/call.png";
 
 import sunny from "../../../public/img/sunny.png";
 import cloudy from "../../../public/img/cloudy.png";
@@ -68,7 +69,10 @@ export function Home() {
 
   return (
     <div className="mt-12">
-
+      <div className="bg-red-700 text-white rounded-lg p-2 fixed bottom-28 md:bottom-8 right-8 z-40 flex cursor-pointer hover:ring-4 hover:ring-red-200">
+          <img src={call} alt="alternative" className="w-5 mr-1"/>
+          Emergency Call
+        </div>
       <Carousel className="rounded-xl h-52 md:h-[580px]">
         <img
           src={banner1}

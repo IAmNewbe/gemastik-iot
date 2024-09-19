@@ -1,6 +1,8 @@
 import routes from "@/routes";
 import { Link } from "react-router-dom";
 import React from "react";
+import { BellIcon } from "@heroicons/react/24/solid";
+import { IconButton } from "@material-tailwind/react";
 
 const BottomNav = (routes) => {
   return (
@@ -30,11 +32,13 @@ const BottomNav = (routes) => {
               </button> 
               <button data-tooltip-target="tooltip-wallet" type="button" className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
                 <Link to="/dashboard/information" className="justify-center mx-auto">
-                  <svg className="mx-auto w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z"/>
-                      <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z"/>
-                  </svg>
-                  <span className="sr-only">Wallet</span>
+                  {/* <svg className="mx-auto w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 20 20">
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                  </svg> */}
+                   {/* <IconButton variant="text" color="text-gray-500" className="block"> */}
+                    <BellIcon className="mx-auto h-6 w-7 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" />
+                  {/* </IconButton> */}
+                  <span className="sr-only">Bell</span>
                   <p className="text-gray-700">Information</p>
                 </Link>
               </button>

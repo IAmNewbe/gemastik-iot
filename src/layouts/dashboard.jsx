@@ -26,10 +26,11 @@ export function Dashboard() {
       <div className="p-4 md:mx-10 lg:mx-14 xl:mx-20">
         <DashboardNavbar />
         <Configurator />
+        
         <IconButton
           size="lg"
           color="white"
-          className="fixed bottom-8 right-8 z-40 rounded-full shadow-blue-gray-900/10"
+          className="hidden fixed bottom-8 right-8 z-40 rounded-full shadow-blue-gray-900/10"
           ripple={false}
           onClick={() => setOpenConfigurator(dispatch, true)}
         >

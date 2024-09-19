@@ -68,9 +68,9 @@ export function Culinaries() {
                     </CardBody>
                     <CardFooter className="mt-6 flex items-end justify-between py-0 px-2 mb-3">
                       
-                        {/* <h2 className="text-lg text-blue-700 font-semibold">
+                        <h2 className="text-lg text-blue-700 font-semibold">
                           {cost}
-                        </h2> */}
+                        </h2>
                       
                       <div>
                        <button className="text-blue-700 border border-blue-700 hover:text-white hover:bg-blue-700 rounded-md p-1">
