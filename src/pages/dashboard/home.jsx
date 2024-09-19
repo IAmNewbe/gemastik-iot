@@ -39,7 +39,7 @@ export function Home() {
     "temperature": 26,
     "wind_speed": 10
   });
-  const THINGSBOARD_HOST_NAME = '18.140.254.213'; // ganti dengan hostname ThingsBoard Anda
+  const THINGSBOARD_HOST_NAME = 'iot.crustea.id'; // ganti dengan hostname ThingsBoard Anda
   const ACCESS_TOKEN = 'nyzA0KZowFlKHquflBxr'; // ganti dengan access token
   const clientKeys = 'humidity,temperature,wind_speed'; // sesuaikan dengan kunci client
   // const sharedKeys = 'shared1,shared2'; // sesuaikan dengan kunci shared
@@ -48,7 +48,7 @@ export function Home() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://${THINGSBOARD_HOST_NAME}/api/v1/${ACCESS_TOKEN}/attributes?clientKeys=${clientKeys}`
+          `https://${THINGSBOARD_HOST_NAME}/api/v1/${ACCESS_TOKEN}/attributes?clientKeys=${clientKeys}`
         );
         
         setData(response.data["client"]);
