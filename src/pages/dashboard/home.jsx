@@ -63,7 +63,7 @@ export function Home() {
     
     console.log("data : ", data);
     console.log(typeof(data["humidity"]));
-    const interval = setInterval(fetchData, 3000); // Refresh data setiap 3 detik
+    const interval = setInterval(fetchData, 5000); // Refresh data setiap 5 detik
     return () => clearInterval(interval);
   }, [THINGSBOARD_HOST_NAME, ACCESS_TOKEN, clientKeys]);
 
@@ -170,7 +170,7 @@ export function Home() {
         <div className="flex flex-col items-center md:mt-3">
           <img src={wind} alt="alternative" className="h-10 w-10 mt-3"/>
           <span className="mt-1 text-sm">Wind Speed</span>
-          <span className="font-semibold text-lg">{data["wind_speed"].toFixed(2)} km/h</span>
+          <span className="font-semibold text-lg">{data["wind_speed"]} m/s</span>
         </div>
       </div>
       {/* <RealTimeData /> */}
