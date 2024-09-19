@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    img: "/img/home-decor-1.jpeg",
+    img: "/img/hotels/1.png",
     title: "Prama Sanur Beach Bali",
     tag: "Project #1",
     description:
@@ -15,7 +15,7 @@ export const projectsData = [
     ],
   },
   {
-    img: "/img/home-decor-2.jpeg",
+    img: "/img/hotels/2.png",
     title: "Kings Villas Sanur by Moria",
     tag: "Project #2",
     description:
@@ -30,7 +30,7 @@ export const projectsData = [
     ],
   },
   {
-    img: "/img/home-decor-3.jpeg",
+    img: "/img/home-decor-1.jpeg",
     title: "Minimalist",
     tag: "Project #3",
     description:
@@ -45,7 +45,7 @@ export const projectsData = [
     ],
   },
   {
-    img: "/img/home-decor-4.jpeg",
+    img: "/img/home-decor-2.jpeg",
     title: "Gothic",
     tag: "Project #4",
     description:

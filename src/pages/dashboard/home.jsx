@@ -195,7 +195,7 @@ export function Home() {
                     key={props.name}
                     {...props}
                     action={
-                      <button className="text-blue-700 flex text-xs mt-1 font-semibold">
+                      <button className="text-blue-700 flex text-xs md:text-sm mt-1 font-semibold">
                         Read More
                       </button>
                     }
