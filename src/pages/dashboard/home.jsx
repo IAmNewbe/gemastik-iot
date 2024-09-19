@@ -63,7 +63,7 @@ export function Home() {
     
     console.log("data : ", data);
     console.log(typeof(data["humidity"]));
-    const interval = setInterval(fetchData, 5000); // Refresh data setiap 5 detik
+    const interval = setInterval(fetchData, 3000); // Refresh data setiap 3 detik
     return () => clearInterval(interval);
   }, [THINGSBOARD_HOST_NAME, ACCESS_TOKEN, clientKeys]);
 
