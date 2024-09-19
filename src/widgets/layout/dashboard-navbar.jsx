@@ -25,6 +25,7 @@ import {
   setOpenConfigurator,
   setOpenSidenav,
 } from "@/context";
+import logo from "../../../public/img/VISIONARIESCREATING.png";
 
 export function DashboardNavbar() {
   const [controller, dispatch] = useMaterialTailwindController();
@@ -35,13 +36,13 @@ export function DashboardNavbar() {
   return (
     <Navbar
       color={"white"}
-      className={`rounded-xl transition-all sticky top-4 z-40 py-3 shadow-md shadow-blue-gray-500/5`}
+      className={`rounded-xl transition-all sticky top-0 vsm:top-4 z-40 py-0 vsm:py-3 shadow-md shadow-blue-gray-500/5`}
       fullWidth
       blurred={true}
     >
       <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
         <div className="capitalize hidden md:block">
-          <Breadcrumbs
+          {/* <Breadcrumbs
             className={`bg-transparent p-0 transition-all ${
               fixedNavbar ? "mt-1" : ""
             }`}
@@ -62,10 +63,11 @@ export function DashboardNavbar() {
             >
               {page}
             </Typography>
-          </Breadcrumbs>
-          <Typography variant="h6" color="blue-gray">
+          </Breadcrumbs> */}
+          <img src={logo} alt="logo" className="h-11 ml-1"/>
+          {/* <Typography variant="h6" color="blue-gray">
             {page}
-          </Typography>
+          </Typography> */}
         </div>
         <div className="flex items-center mx-auto md:mx-0">
           {/* <div className="mr-auto md:mr-4 md:w-56">
@@ -106,7 +108,7 @@ export function DashboardNavbar() {
             <Button
               variant="text"
               color="blue-gray"
-              className=" items-center gap-1 px-4 text-base xl:flex normal-case"
+              className="items-center gap-1 px-1 vsm:px-4 text-sm vsm:text-base xl:flex normal-case"
             >
               {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
               Hotels
@@ -117,7 +119,7 @@ export function DashboardNavbar() {
             <Button
               variant="text"
               color="blue-gray"
-              className="items-center gap-1 px-4 text-base xl:flex normal-case"
+              className="items-center gap-1 px-1 vsm:px-4 text-sm vsm:text-base xl:flex normal-case"
             >
               {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
               Vacations
@@ -128,7 +130,7 @@ export function DashboardNavbar() {
             <Button
               variant="text"
               color="blue-gray"
-              className="items-center gap-1 px-4 text-base xl:flex normal-case"
+              className="items-center gap-1 px-1 vsm:px-4 text-sm vsm:text-base xl:flex normal-case"
             >
               {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
               Culinaries

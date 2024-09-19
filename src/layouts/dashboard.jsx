@@ -46,7 +46,7 @@ export function Dashboard() {
           )}
         </Routes>
         <div className="mx-auto justify-center relative">
-          <BottomNav 
+          <BottomNav
             routes={routes}
             />
         </div>
