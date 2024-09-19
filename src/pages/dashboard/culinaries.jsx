@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   CardBody,
@@ -19,35 +20,18 @@ import {
   PencilIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-import { platformSettingsData, conversationsData, projectsData } from "@/data";
+import { culinariesData } from "@/data";
 
+export function Culinaries() {
 
-export function Tables() {
   return (
-    <>
-      <Card className="mx-auto mt-10 mb-6 lg:mx-2 bg-transparent border-none shadow-none">
-        <div className="ml-2 md:ml-6 flex">
-          <Typography
-            variant="small"
-            className="mx-3 font-normal text-blue-gray-500 cursor-pointer border border-blue-gray-500 rounded-md w-fit p-1 px-2"
-          >
-            filter
-          </Typography>
-          <Typography
-          variant="small"
-          className="font-normal text-blue-gray-500 border cursor-pointer border-blue-gray-500 rounded-md w-fit p-1"
-          >
-            sort
-          </Typography>
-
-        </div>
-
-        <CardBody className="p-4">
+    <div className="">
+      <CardBody className="p-4">
           <div className="md:px-4 md:pb-4">
             
 
             <div className="mt-6 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3 rounded-md">
-              {projectsData.map(
+              {culinariesData.map(
                 ({ img, title, description, tag, route,cost, members }) => (
                   <Card key={title} color="transparent" shadow={false} className="bg-white">
                     <CardHeader
@@ -84,9 +68,9 @@ export function Tables() {
                     </CardBody>
                     <CardFooter className="mt-6 flex items-end justify-between py-0 px-2 mb-3">
                       
-                        <h2 className="text-lg text-blue-700 font-semibold">
+                        {/* <h2 className="text-lg text-blue-700 font-semibold">
                           {cost}
-                        </h2>
+                        </h2> */}
                       
                       <div>
                        <button className="text-blue-700 border border-blue-700 hover:text-white hover:bg-blue-700 rounded-md p-1">
@@ -100,9 +84,8 @@ export function Tables() {
             </div>
           </div>
         </CardBody>
-      </Card>
-    </>
+    </div>
   );
 }
 
-export default Tables;
+export default Culinaries;

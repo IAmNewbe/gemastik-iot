@@ -17,13 +17,13 @@ export function Dashboard() {
 
   return (
     <div className="min-h-screen bg-blue-gray-50/50">
-      <Sidenav
+      {/* <Sidenav
         routes={routes}
         brandImg={
           sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
         }
-      />
-      <div className="p-4 xl:ml-80">
+      /> */}
+      <div className="p-4 md:mx-10 lg:mx-14 xl:mx-20">
         <DashboardNavbar />
         <Configurator />
         <IconButton

@@ -44,7 +44,7 @@ export function DashboardNavbar() {
       blurred={fixedNavbar}
     >
       <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
-        <div className="capitalize">
+        <div className="capitalize hidden md:block">
           <Breadcrumbs
             className={`bg-transparent p-0 transition-all ${
               fixedNavbar ? "mt-1" : ""
@@ -71,39 +71,78 @@ export function DashboardNavbar() {
             {page}
           </Typography>
         </div>
-        <div className="flex items-center">
-          <div className="mr-auto md:mr-4 md:w-56">
+        <div className="flex items-center mx-auto md:mx-0">
+          {/* <div className="mr-auto md:mr-4 md:w-56">
             <Input label="Search" />
-          </div>
-          <IconButton
+          </div> */}
+          {/* <IconButton
             variant="text"
             color="blue-gray"
             className="grid xl:hidden"
             onClick={() => setOpenSidenav(dispatch, !openSidenav)}
           >
             <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
-          </IconButton>
-          <Link to="/auth/sign-in">
+          </IconButton> */}
+
+          <Link to="/dashboard/home">
             <Button
               variant="text"
               color="blue-gray"
-              className="hidden items-center gap-1 px-4 xl:flex normal-case"
+              className="hidden items-center gap-1 px-4 text-base xl:flex normal-case"
             >
-              <UserCircleIcon className="h-5 w-5 text-blue-gray-500" />
-              Sign In
+              {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
+              Home
             </Button>
-            <IconButton
+          </Link>
+
+          <Link to="/dashboard/information">
+            <Button
               variant="text"
               color="blue-gray"
-              className="grid xl:hidden"
+              className="hidden items-center gap-1 px-4 text-base xl:flex normal-case"
             >
-              <UserCircleIcon className="h-5 w-5 text-blue-gray-500" />
-            </IconButton>
+              {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
+              Information
+            </Button>
           </Link>
+
+          <Link to="/dashboard/explore">
+            <Button
+              variant="text"
+              color="blue-gray"
+              className=" items-center gap-1 px-4 text-base xl:flex normal-case"
+            >
+              {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
+              Hotels
+            </Button>
+          </Link>
+
+          <Link to="/dashboard/vacations">
+            <Button
+              variant="text"
+              color="blue-gray"
+              className="items-center gap-1 px-4 text-base xl:flex normal-case"
+            >
+              {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
+              Vacations
+            </Button>
+          </Link>
+
+          <Link to="/dashboard/culinaries">
+            <Button
+              variant="text"
+              color="blue-gray"
+              className="items-center gap-1 px-4 text-base xl:flex normal-case"
+            >
+              {/* <UserCircleIcon className="h-5 w-5 text-blue-gray-500" /> */}
+              Culinaries
+            </Button>
+          </Link>
+
           <Menu>
             <MenuHandler>
-              <IconButton variant="text" color="blue-gray">
-                <BellIcon className="h-5 w-5 text-blue-gray-500" />
+              <IconButton variant="text" color="blue-gray" className="hidden md:block">
+                <BellIcon className=" h-5 w-5 text-blue-gray-500" />
               </IconButton>
             </MenuHandler>
             <MenuList className="w-max border-0">

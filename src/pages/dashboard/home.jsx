@@ -23,6 +23,7 @@ import sunnycloudy from "../../../public/img/sunny-cloudy.png";
 import wind from "../../../public/img/wind.png";
 import temp from "../../../public/img/temp.png";
 import humid from "../../../public/img/humid.png";
+import banner1 from "../../../public/img/banner1.jpg";
 import { platformSettingsData, conversationsData, projectsData } from "@/data";
 import { ProfileInfoCard, MessageCard } from "@/widgets/cards";
 import Weather from "./weather";
@@ -68,9 +69,9 @@ export function Home() {
   return (
     <div className="mt-12">
 
-      <Carousel className="rounded-xl h-2/3">
+      <Carousel className="rounded-xl h-52 md:h-[580px]">
         <img
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80"
+          src={banner1}
           alt="image 1"
           className="w-full h-full object-cover object-center"
         />
@@ -92,7 +93,7 @@ export function Home() {
       <div className="flex justify-between">
         <div className="flex flex-col w-full">
           <div className="flex justify-between">
-            <p className="text-2xl font-bold">Good Morning</p>
+            <p className="text-lg md:text-2xl font-bold">Good Morning</p>
             <p className="">Fri, 22 Sep 2024</p>
           </div>
           
@@ -183,7 +184,7 @@ export function Home() {
                   Public Informations
               </Typography>
              
-              <a href="/dashboard/profile" className="text-blue-700">Show More</a>
+              <a href="/dashboard/information" className="text-blue-700 text-sm md:text-base">Show More</a>
               
             </div>
             

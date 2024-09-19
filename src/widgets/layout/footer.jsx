@@ -13,7 +13,7 @@ export function Footer({ brandName, brandLink, routes }) {
           <HeartIcon className="-mt-0.5 inline-block h-3.5 w-3.5 text-red-600" /> by{" "}
           <a
             href={brandLink}
-            target="_blank"
+            target="none"
             className="transition-colors hover:text-blue-500 font-bold"
           >
             {brandName}
@@ -41,10 +41,10 @@ export function Footer({ brandName, brandLink, routes }) {
 }
 
 Footer.defaultProps = {
-  brandName: "Creative Tim",
-  brandLink: "https://www.creative-tim.com",
+  brandName: "Visionaries Crafting Our Innovative Smart City",
+  brandLink: "/",
   routes: [
-    { name: "Creative Tim", path: "https://www.creative-tim.com" },
+    { name: "Visionaries", path: "https://www.creative-tim.com" },
     { name: "About Us", path: "https://www.creative-tim.com/presentation" },
     { name: "Blog", path: "https://www.creative-tim.com/blog" },
     { name: "License", path: "https://www.creative-tim.com/license" },
